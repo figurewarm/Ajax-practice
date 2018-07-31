@@ -1,0 +1,7 @@
+*{margin:0;padding: 0}
+img{max-width: 100%}
+#moviesRow{background: #fff;margin: 40px auto;width: 700px;height: 250px;border: 1dx solid #ddd;}
+.mBox{text-align: center;margin: 0 10px;width: 150px;list-style-type: none;height: 100%;float: left;}
+.mPost img{margin-top: 10px;width: 128px;}
+.mTitle{text-align: center}
+.mScore{font-size: 14px;color: #E9967A}
