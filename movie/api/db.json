@@ -1,17 +1,38 @@
-{"movies":[
-        {
-            "id": 1,
-            "title": "羞羞的铁拳",
-            "data": "2017",
-            "director": "梁凌锐"
-        },
-        {
-            "id": 2,
-            "title": "邪不压正",
-            "data": "2018",
-            "director": "姜文"
-        }
-        
-]
-    
+{
+  "movies": [
+    {
+      "id": 1,
+      "title": "羞羞的铁拳",
+      "data": "2017",
+      "director": "梁凌锐",
+      "post": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2507227732.webp"
+    },
+    {
+      "id": 2,
+      "title": "邪不压正",
+      "data": "2018",
+      "director": "姜文",
+      "post": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2507227732.webp"
+    },
+    {
+      "title": "机器之血",
+      "post": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2507227732.webp",
+      "director": "陈鑫",
+      "score": "8.2",
+      "data": "2017.09.09",
+      "id": 3
+    }
+  ],
+  "data": [
+    {
+      "image": "http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg",
+      "title": "搏一搏，单车变摩托？你赞同赌球吗？"
+    },
+    {
+      "image": "http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg"
+    },
+    {
+      "image": "http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg"
+    }
+  ]
 }

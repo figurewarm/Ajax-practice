@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>movies</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <script type="text/javascript" src="./node_modules/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="./node_modules/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+        window.onload = function () {
+        $('#addMovie').click(e=>{
+            e.preventDefault();
+            let tagElements = $('input')
+            let movieData = {};
+            for(let item of tagElements){
+                movieData[item.name] = item.value;
+            }
+            console.log(movieData);
+            axios.post('http://localhost:3000/movies',movieData)
+                .then(response =>{
+                    if(response.data)
+                        console.log(response.data)
+                        alert("添加成功");
+                })
+        })
+        }
+    </script>
+</head>
+<body style="background-color: #fff;">
+    <div class="container">
+        <form id="addMovies">
+            <div class="input-group">
+                <span class="input-group-addon" id="basic-addon1">影名：</span>
+                <input type="text" class="form-control" placeholder="Username"  name="title" aria-describedby="basic-addon1" required>
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon" id="basic-addon1">海报：</span>
+                <input type="text" class="form-control" placeholder="Username"  name="post" aria-describedby="basic-addon1" required>
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon" id="basic-addon1">导演：</span>
+                <input type="text" class="form-control" placeholder="Username" name="director" aria-describedby="basic-addon1" required>
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon" id="basic-addon1">评分：</span>
+                <input type="text" class="form-control" placeholder="Username" name="score" aria-describedby="basic-addon1" required>
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon" id="basic-addon1">日期：</span>
+                <input type="text" class="form-control" placeholder="Username"  name="data" aria-describedby="basic-addon1" required>
+            </div>
+            <div>
+                <button type="reset">清空</button>
+                <button id="addMovie" type="submit">提交</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
